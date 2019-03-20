@@ -1,0 +1,11 @@
+.gradle
+.idea
+build
+gradle
+out
+mog-client/build
+mog-client/out
+mog-server/build
+mog-server/out
+gradlew
+gradlew.bat

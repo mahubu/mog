@@ -1,0 +1,62 @@
+plugins {
+    id 'java-library'
+}
+
+group 'mog'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.11
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+dependencies {
+    implementation group: 'protocol', name: 'protocol', version: '1.0-SNAPSHOT'
+    implementation group: 'net.onedaybeard.artemis', name: 'artemis-odb', version: '2.2.0'
+    implementation group: 'org.mongodb', name: 'mongo-java-driver', version: '3.10.1'
+    testImplementation group: 'junit', name: 'junit', version: '4.12'
+}
+
+// Java 9+ modules
+
+/*
+ext.moduleName = 'mog.mog.server'
+
+compileJava {
+    inputs.property("moduleName", moduleName)
+    doFirst {
+        options.compilerArgs = [
+                '--module-path', classpath.asPath,
+        ]
+        classpath = files()
+    }
+}
+
+compileTestJava {
+    inputs.property("moduleName", moduleName)
+    doFirst {
+        options.compilerArgs = [
+                '--module-path', classpath.asPath,
+                '--add-modules', 'junit',
+                '--add-reads', "$moduleName=junit",
+                '--patch-module', "$moduleName=" + files(sourceSets.test.java.srcDirs).asPath,
+        ]
+        classpath = files()
+    }
+}
+
+test {
+    inputs.property("moduleName", moduleName)
+    doFirst {
+        jvmArgs = [
+                '--module-path', classpath.asPath,
+                '--add-modules', 'ALL-MODULE-PATH',
+                '--add-reads', "$moduleName=junit",
+                '--patch-module', "$moduleName=" + files(sourceSets.test.java.outputDir).asPath,
+        ]
+        classpath = files()
+    }
+}
+*/

@@ -1,0 +1,4 @@
+rootProject.name = 'mog'
+include 'mog-server'
+include 'mog-client'
+
