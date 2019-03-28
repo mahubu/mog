@@ -10,8 +10,8 @@ import io.netty.handler.codec.protobuf.ProtobufVarint32LengthFieldPrepender;
 import io.netty.handler.logging.LogLevel;
 import io.netty.handler.logging.LoggingHandler;
 import mog.Lifecyclic;
-import protocol.handler.codec.protobuf.ProtobufDecoder;
-import protocol.handler.codec.protobuf.ProtobufEncoder;
+import protocol.handler.codec.protobuf.compact.ProtobufDecoder;
+import protocol.handler.codec.protobuf.compact.ProtobufEncoder;
 
 /**
  * Channel bootstrap : listen to incoming & out-coming messages through the channels.
